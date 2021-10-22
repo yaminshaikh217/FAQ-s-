@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 1rem 0;
+  color: rgb(209, 160, 255);
+}
+.faq {
+  position: relative;
+  border: 1px solid rgb(187, 187, 187);
+  margin: 1rem 0;
+  padding: 1.5rem;
+  letter-spacing: 2px;
+  width: 65rem;
+  color: #fff;
+  overflow: hidden;
+  line-height: 193%;
+  transition: all 0.4s linear;
+  border-radius: 5px;
+}
+
+.faq h2 {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  position: absolute;
+  top: 28px;
+  right: 29px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.btn .fa {
+  transform: rotate(180deg);
+  transition: all 0.2s linear;
+}
+
+.faq.active .fa {
+  transform: rotate(0deg);
+}
+
+.btn:hover {
+  color: rgb(209, 160, 255);
+}
+
+p {
+  display: none;
+}
+
+.faq.active p {
+  display: block;
+}
+
+.faq.active {
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.4);
+}
+
+.fa-comments {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+  top: -10px;
+  font-size: 6rem;
+  left: -13px;
+  z-index: -1;
+  color: rgb(184, 255, 162);
+}
+
+.faq.active .fa-comments {
+  opacity: 0.4;
+}
+
+/* media query  */
+
+@media (max-width: 1040px) {
+  .faq {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .faq {
+    width: 20rem;
+  }
+}
